@@ -3,7 +3,7 @@
 /**************************************************************************/
 
 #ifndef WONGETDISKFREESPACEEX_H_
-#define WONGETDISKFREESPACEEX_H_      1   /* Version 1 */
+#define WONGETDISKFREESPACEEX_H_      2   /* Version 2 */
 
 #ifndef _INC_WINDOWS
     #include <windows.h>
