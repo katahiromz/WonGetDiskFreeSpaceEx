@@ -3,10 +3,14 @@
 
 #include "WonGetDiskFreeSpaceEx.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**************************************************************************/
 
-typedef BOOL (WINAPI *GDFSEA)(LPCSTR, PULARGE_INTEGER, 
-                              PULARGE_INTEGER, PULARGE_INTEGER);
+typedef BOOL (WINAPI *GDFSEA)(const char *, ULARGE_INTEGER *, 
+                              ULARGE_INTEGER *, ULARGE_INTEGER *);
 
 BOOL WINAPI WonGetDiskFreeSpaceExA(
     const char *lpDirectoryName,
@@ -65,8 +69,8 @@ BOOL WINAPI WonGetDiskFreeSpaceExA(
 
 /**************************************************************************/
 
-typedef BOOL (WINAPI *GDFSEW)(LPCWSTR, PULARGE_INTEGER, 
-                              PULARGE_INTEGER, PULARGE_INTEGER);
+typedef BOOL (WINAPI *GDFSEW)(const WCHAR *, ULARGE_INTEGER *, 
+                              ULARGE_INTEGER *, ULARGE_INTEGER *);
 
 BOOL WINAPI WonGetDiskFreeSpaceExW(
     const WCHAR *lpDirectoryName,
@@ -124,3 +128,7 @@ BOOL WINAPI WonGetDiskFreeSpaceExW(
 }
 
 /**************************************************************************/
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
