@@ -43,19 +43,19 @@ BOOL WINAPI WonGetDiskFreeSpaceExA(
     {
         if (lpFreeBytesAvailable)
         {
-            *lpFreeBytesAvailable = 
+            lpFreeBytesAvailable->QuadPart = 
                 (ULONGLONG)dwFreeClusters * dwSectPerClust *
                     dwBytesPerSect;
         }
         if (lpTotalNumberOfBytes)
         {
-            *lpTotalNumberOfBytes = 
+            lpTotalNumberOfBytes->QuadPart = 
                 (ULONGLONG)dwTotalClusters * dwSectPerClust * 
                     dwBytesPerSect;
         }
         if (lpTotalNumberOfFreeBytes)
         {
-            *lpTotalNumberOfFreeBytes = 
+            lpTotalNumberOfFreeBytes->QuadPart = 
                 (ULONGLONG)dwFreeClusters * dwSectPerClust *
                     dwBytesPerSect;
         }
@@ -103,19 +103,19 @@ BOOL WINAPI WonGetDiskFreeSpaceExW(
     {
         if (lpFreeBytesAvailable)
         {
-            *lpFreeBytesAvailable = 
+            lpFreeBytesAvailable->QuadPart = 
                 (ULONGLONG)dwFreeClusters * dwSectPerClust *
                     dwBytesPerSect;
         }
         if (lpTotalNumberOfBytes)
         {
-            *lpTotalNumberOfBytes = 
+            lpTotalNumberOfBytes->QuadPart = 
                 (ULONGLONG)dwTotalClusters * dwSectPerClust * 
                     dwBytesPerSect;
         }
         if (lpTotalNumberOfFreeBytes)
         {
-            *lpTotalNumberOfFreeBytes = 
+            lpTotalNumberOfFreeBytes->QuadPart = 
                 (ULONGLONG)dwFreeClusters * dwSectPerClust *
                     dwBytesPerSect;
         }
