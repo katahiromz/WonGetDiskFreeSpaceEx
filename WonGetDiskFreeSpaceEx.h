@@ -1,5 +1,5 @@
 /* WonWonGetDiskFreeSpaceEx.h --- Wonders API GetDiskFreeSpaceEx */
-/* Copyright (C) 2017 Katayama Hirofumi MZ. License: CC0 */
+/* Copyright (C) 2017-2022 Katayama Hirofumi MZ. License: CC0 */
 /**************************************************************************/
 
 #pragma once
@@ -15,13 +15,13 @@ extern "C" {
 /**************************************************************************/
 
 BOOL WINAPI WonGetDiskFreeSpaceExA(
-    const char *lpDirectoryName,
+    LPCSTR lpDirectoryName,
     ULARGE_INTEGER *lpFreeBytesAvailable,
     ULARGE_INTEGER *lpTotalNumberOfBytes,
     ULARGE_INTEGER *lpTotalNumberOfFreeBytes);
 
 BOOL WINAPI WonGetDiskFreeSpaceExW(
-    const WCHAR *lpDirectoryName,
+    LPCWSTR lpDirectoryName,
     ULARGE_INTEGER *lpFreeBytesAvailable,
     ULARGE_INTEGER *lpTotalNumberOfBytes,
     ULARGE_INTEGER *lpTotalNumberOfFreeBytes);
